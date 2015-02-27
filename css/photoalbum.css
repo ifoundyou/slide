@@ -1,0 +1,202 @@
+
+.page-content {
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    -webkit-box-flex: 100;
+}
+
+.m-cascadingTeletext {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.m-cascadingTeletext li {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+.m-cascadingTeletext * {
+    overflow: hidden!important;
+}
+
+.m-cascadingTeletext li img {
+    width: 480px;
+    border-radius: 2px;
+    box-shadow: 0 0 13px 0 #B8B8B8;
+    -webkit-transition: all .8s ease-out;
+    -webkit-transform: rotateZ(30deg) scale(3) translate3d(80%,80%,0);
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    right: 0;
+    bottom: 30px;
+    margin-left: -240px;
+}
+
+.m-cascadingTeletext li:nth-child(1) {
+    display: block;
+    z-index: 3;
+}
+
+.m-cascadingTeletext li:nth-child(2) {
+    display: block;
+    z-index: 2;
+}
+.m-cascadingTeletext li:nth-child(3) {
+    display: block;
+    z-index: 1;
+}
+
+
+.active .m-cascadingTeletext li:nth-child(1) img {
+    -webkit-transform: rotateZ(0deg) scale(1) translate3d(0%,0,0);
+    -webkit-transition-delay: 1s;
+}
+.active .m-cascadingTeletext li:nth-child(2) img {
+    -webkit-transform: rotateZ(1.6deg) scale(1) translate3d(0%,0,0);
+    -webkit-transition-delay: .5s;
+}
+.active .m-cascadingTeletext li:nth-child(3) img {
+    -webkit-transform: rotateZ(3.2deg) scale(1) translate3d(0%,0,0);
+    -webkit-transition-delay: 0s;
+}
+
+.u-guideNext, .u-guidePrev {
+    text-decoration: none;
+    position: absolute;
+    top: 40%;
+    z-index: 50;
+    background: url(../img/units-icons.png) -116px 0;
+    display: block;
+    width: 46px;
+    height: 56px;
+}
+
+.u-guideNext div, .u-guidePrev div {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    top: 50%;
+    margin: -40px;
+
+}
+
+.u-guidePrev {
+    left: 18px;
+}
+.u-guideNext {
+    right: 18px;
+    -webkit-transform: rotateZ(180deg);
+}
+
+.active .u-guideNext {
+    -webkit-animation: guideNext 3.5s infinite;
+}
+.active .u-guidePrev {
+    -webkit-animation: guidePrev 3.5s infinite;
+}
+
+.u-guideNext,
+ .u-guidePrev {
+    -webkit-transition: all .6s;
+    -webkit-transition-delay: 2.2s;
+    opacity: 0;
+}
+
+.active .u-guideNext,
+.active .u-guidePrev {
+    opacity: 1;
+}
+
+.m-cascadingTeletext li .imgText {
+    -webkit-transform: translate3d(0,0,0);
+}
+
+.m-cascadingTeletext li.z-hideToLeft img {
+    -webkit-animation: cascadingTeletext_hideToLeft 0.5s linear
+}
+
+.m-cascadingTeletext li.z-hideToLeft .imgText, .m-cascadingTeletext li.z-hideToRight .imgText {
+    -webkit-transform: translate3d(0,100%,0);
+}
+
+@-webkit-keyframes cascadingTeletext_hideToLeft {
+    0% {
+        -webkit-transform: translate3d(0,0,0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translate3d(-100%,0,0);
+        opacity: 0
+    }
+}
+
+.m-cascadingTeletext li.z-hideToRight img {
+    -webkit-animation: cascadingTeletext_hideToRight 0.5s linear
+}
+
+@-webkit-keyframes cascadingTeletext_hideToRight {
+    0% {
+        -webkit-transform: translate3d(-100%,0,0);
+        opacity: 0
+    }
+    100% {
+        -webkit-transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes guidePrev {
+    0%, 20% {
+        -webkit-transform: translateX(0px)
+    }
+    35% {
+        -webkit-transform: translateX(12px)
+    }
+    50% {
+        -webkit-transform: translateX(-20px)
+    }
+    65% {
+        -webkit-transform: translateX(0px)
+    }
+    80% {
+        -webkit-transform: translateX(-12px)
+    }
+    100% {
+        -webkit-transform: translateX(0px)
+    }
+}
+
+@-webkit-keyframes guideNext {
+    0%, 20% {
+        -webkit-transform: translateX(0px) rotateZ(180deg)
+    }
+    35% {
+        -webkit-transform: translateX(-12px) rotateZ(180deg)
+    }
+    50% {
+        -webkit-transform: translateX(20px) rotateZ(180deg)
+    }
+    65% {
+        -webkit-transform: translateX(0px) rotateZ(180deg)
+    }
+    80% {
+        -webkit-transform: translateX(12px) rotateZ(180deg)
+    }
+    100% {
+        -webkit-transform: translateX(0px) rotateZ(180deg)
+    }
+}
+
+
+

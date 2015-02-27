@@ -1,0 +1,17 @@
+
+.imgbox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.imgbox img {
+    position: absolute;
+    width: 99%;
+    height: auto;
+    vertical-align: middle;
+    text-align: center;
+    top: 25%;
+}

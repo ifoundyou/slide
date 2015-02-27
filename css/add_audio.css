@@ -1,0 +1,87 @@
+.screen-music-security {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+
+.screen-music-security div {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+    font-size: 4em;
+    -webkit-transform: translate3d(0px, 0px, 2px);
+    transform: translate3d(0px, 0px, 2px);
+
+}
+
+.screen-music-security .silence-button {
+    text-decoration: underline;
+    -webkit-transform: translate3d(0px, 0px, 2px);
+    transform: translate3d(0px, 0px, 2px);
+
+}
+
+.icon-music {
+    width: 54px;
+    height: 54px;
+    background: url(../img/units-icons.png);
+    display: block;
+}
+
+.icon-music div {
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+    margin-top: -50px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+
+.icon-music.play-music {
+    -webkit-animation: reverseRotataZ 1.2s linear infinite;
+}
+
+.audio-button {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    position: absolute;
+    display: block;
+}
+
+
+@-webkit-keyframes reverseRotataZ {
+    0% {
+        -webkit-transform: rotateZ(0deg)
+    }
+    100% {
+        -webkit-transform: rotateZ(-360deg)
+    }
+}
+
+.audio-button span {
+    position: absolute;
+    right: 70px;
+    top: 10px;
+    text-shadow: 1px 1px 1px #000;
+    letter-spacing: 2px;
+    -webkit-transition: all .2s linear;
+    opacity: 0;
+    -webkit-transform: translate3d(-20px, 0, 0);
+}
+
+.audio-button span.audio-show {
+    opacity: 1;
+}
+
+@media screen and ( max-device-width: 760px ) {
+    .screen-music-security div {
+        font-size: 2em;
+    }
+}

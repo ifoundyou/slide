@@ -1,0 +1,45 @@
+.page-number-counter-wrapper {
+    display: table;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #a00;
+    z-index: 1;
+    height: 45px;
+    width: 100%;
+}
+.page-number-counter {
+    position: relative;
+    width: 100px;
+    height: 25px;
+    top: 0;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    z-index: 1000;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    margin: 10px 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    font-weight: bold;
+    display: table-cell;
+
+}
+
+@media all and ( orientation:landscape ) {
+    .page-number-counter-wrapper {
+        float: right;
+        width: 25px;
+        padding-left: 20px;
+        height: 100%;
+
+    }
+    .page-number-counter {
+        position: absolute;
+        -webkit-transform: translateX(25px) rotate(90deg);
+        top: 40%;
+        right: 0;
+    }
+}

@@ -1,0 +1,39 @@
+.link-for-magazine {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.link-for-magazine div {
+    position: relative;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+    padding: 15px;
+    z-index: 10;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: translate3d(0px, 0px, 0px) ;
+    -moz-transform: translate3d(0px, 0px, 0px) ;
+    -ms-transform: translate3d(0px, 0px, 0px) ;
+    -o-transform: translate3d(0px, 0px, 0px) ;
+    transform: translate3d(0px, 0px, 0px) ;
+}
+
+.link-for-magazine a {
+    color: #ffffff;
+    font-size: 300%;
+    position: relative;
+}
+
+    .link-for-magazine div {
+        padding: 10px;
+    }
+    .link-for-magazine a {
+        font-size: 28px;
+        padding: 15px;
+    }
+

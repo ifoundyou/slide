@@ -1,0 +1,281 @@
+
+/*reset*/
+
+html { font-size:1em;-webkit-tap-highlight-color:rgba(0,0,0,0); -webkit-tap-highlight:rgba(0,0,0,0);-webkit-text-size-adjust:none;}
+body { font-size:0.75em}
+label { cursor:pointer}
+a:link, a:visited { text-decoration:none}
+input,button,select,textarea{outline:none} textarea{resize:none;}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, blockquote, big, body, center, canvas, caption, cite, code, datalist, dd, del, details, dfn, dl, div, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, html, i, iframe, img, ins, kbd, keygen, label, legend, li, meter, nav, menu, object, ol, output, p, pre, progress, q, s, samp, section, small, span, source, strike, strong, sub, sup, table, tbody, tfoot, thead, th, tr, tt,
+u, ul, var { margin:0; padding:0}
+
+article, aside, footer, header, nav, section, figure, figcaption { display: block} /*html5设置*/
+
+h1, h2, h3, h4, h5, h6, th, td, table, input, button, select, textarea, sub{ font-size:1em}
+body, input, button, select, textarea, sub{ font-family:Arial, sans-serif}
+em, cite, address, optgroup { font-style:normal}
+kbd, samp, code { font-family:monospace}
+
+img, input, button, select, textarea { vertical-align:middle}
+ul, ol { list-style:none}
+img, fieldset { border:0}
+abbr, acronym { cursor:help; border-bottom:1px dotted black}
+table {	width:100%; border-spacing:0; border:0}
+table th, table td { border:0}
+legend, hr { overflow:hidden; position:absolute; top:0; left:0}
+legend, hr, caption { visibility:hidden; font-size:0; width:0; height:0; line-height:0}
+/*------------------------------------------------------------------------------------------------------------------------------*/
+
+html { width: 100%; height: 100%; }
+body { margin:0 auto; width:100%; background:#fff;height: 100%; overflow: hidden; }
+
+/*index*/
+
+* {
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; /* Disable selection/copy in UIWebView */
+}
+.container {
+    position:absolute;
+    display: block;
+    top:0;
+    left:0;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+}
+
+.m-img {
+    width:100%;
+    height:100%;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
+.sw-left-sidebar {
+    background: #a00;
+    overflow: hidden;
+}
+
+.slide-wrapper {
+    float: right;
+}
+.slide-list {
+    position: absolute;
+    margin: 5px;
+}
+
+.swiper-container {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.menu-list {
+    height: 100%;
+    position: relative;
+    background: url("../img/menu_bg.jpg") no-repeat;
+}
+
+.menu-list>div {
+    height: 100%;
+    padding: 30px;
+    overflow: hidden;
+    position: relative;
+    z-index: 10000;
+}
+
+.menu-list h3 {
+    font-size: 25px;
+    color: #fff;
+}
+
+.menu-list ul {
+    padding: 0 20px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.menu-list li {
+    font-size: 20px;
+    color: #fff;
+    list-style-type: disc;
+    padding: 20px 0;
+}
+
+.nav-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.slide-list {
+    overflow: hidden;
+}
+
+.show-elem {
+    margin: 10px;
+    /*display: inline-block;*/
+}
+.show-elem {
+    margin: 10px;
+    float: left;
+}
+
+/* top pagination*/
+
+#stripes_button {
+    width: 30px;
+    height: 30px;
+    background: rgba(0,0,0,0.3) url('../img/stripes_menu.png') 10px 10px no-repeat;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    z-index: 10000;
+    margin: 10px;
+    padding: 10px;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+#drops_button {
+    width: 30px;
+    height: 30px;
+    background: rgba(0,0,0,0.3) url('../img/drops_menu.png') 10px 10px no-repeat;
+    border-radius: 10px;
+    position: absolute;
+    right: 0;
+    z-index: 10000;
+    margin: 10px;
+    padding: 10px;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.nav-slide {
+    float: left;
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    perspective: 1200px;
+}
+
+.sw-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+
+.sw-slide {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(50, 50, 50, 0.7);
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.active-sw-slide {
+    display: block;
+}
+
+.sw-wrapper > .sw-slide {
+    position: absolute;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.sw-wrapper > .sw-slide > img,
+.sw-wrapper > .sw-slide > a > img {
+    display: block;
+    line-height: 1;
+}
+
+.sw-wrapper > .active,
+.sw-wrapper > .next,
+.sw-wrapper > .prev {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+    display: block;
+}
+
+.sw-wrapper > .active {
+    top: 0;
+}
+
+.sw-wrapper > .next,
+.sw-wrapper > .prev {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+}
+
+.sw-wrapper > .next {
+    /*top: 100%;*/
+}
+
+.sw-wrapper > .prev {
+    /*top: -100%;*/
+}
+
+.sw-wrapper > .next.up,
+.sw-wrapper > .prev.down {
+    top: 0%;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+
+}
+
+.sw-wrapper > .active.up {
+    top: 0%;
+    -webkit-transform: translate3d(0px, -100%, 0px);
+
+}
+
+.sw-wrapper > .active.down {
+    top: 100%;
+}
+.show {
+    display: block !important;
+}
+
+.corrector {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin: 100px;
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    transform: translate3d(0, 0, 0) !important;
+
+}
+
+@media screen and (min-width: 750px) {
+
+    .menu-list {
+        background: url("../img/menu_bg_2x.jpg") no-repeat;
+    }
+
+}
+@media all and ( orientation:landscape ) {
+
+    #stripes_button {
+        position: absolute;
+
+        right: 0;
+        left: inherit;
+        top: 0;
+    }
+
+    #drops_button {
+        right: 0;
+        bottom: 0;
+    }
+}
+
